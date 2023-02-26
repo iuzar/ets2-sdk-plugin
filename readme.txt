@@ -2,6 +2,8 @@
 
 This SDK provides information and APIs necessary for interaction between a third party software and the Euro Truck Simulator 2 (ETS2),  American Truck Simulator (ATS) and possible other future games from SCS Software. At this time the only supported API is telemetry output. In the future additional APIs might be implemented.
 
+Added the sdk versions from 1.5 to 1.14
+
 ========== Plugin modules ==========
 
 The plugins are implemented as a dynamically loaded libraries (DLL on Windows, SO on Linux) which MUST export set of functions required by the APIs they want to use. The game loads all plugins found by combination of following methods:
