@@ -214,7 +214,7 @@ SCSSDK_HEADER
  * @brief Brake pedal input as used by the simulation <0;1>
  *
  * Accounts for the press attack curve for digital inputs. Does
- * not contain retarder, parking or motor brake.
+ * not contain retarder, parking or engine brake.
  *
  * Type: float
  */
@@ -270,7 +270,7 @@ SCSSDK_HEADER
 #define SCS_TELEMETRY_TRUCK_CHANNEL_parking_brake               "truck.brake.parking"
 
 /**
- * @brief Is the motor brake enabled?
+ * @brief Is the engine brake enabled?
  *
  * Type: bool
  */
@@ -279,7 +279,7 @@ SCSSDK_HEADER
 /**
  * @brief Current level of the retarder.
  *
- * <0;max> where 0 is disabled retarder and max is maximal
+ * <0;max> where 0 is disabled retarder and max is maximum
  * value found in TRUCK configuration.
  *
  * Type: u32
@@ -463,6 +463,17 @@ SCSSDK_HEADER
 #define SCS_TELEMETRY_TRUCK_CHANNEL_rblinker                    "truck.rblinker"
 
 /**
+ * @brief Are the hazard warning light enabled?
+ *
+ * This represents the logical enable state of the hazard warning.
+ * It it is true as long it is enabled regardless of the physical
+ * enabled state of the light (i.e. it does not blink).
+ *
+ * Type: bool
+ */
+#define SCS_TELEMETRY_TRUCK_CHANNEL_hazard_warning              "truck.hazard.warning"
+
+/**
  * @brief Is the light in the left blinker currently on?
  *
  * Type: bool
@@ -554,6 +565,41 @@ SCSSDK_HEADER
  */
 #define SCS_TELEMETRY_TRUCK_CHANNEL_dashboard_backlight         "truck.dashboard.backlight"
 
+/**
+ * @brief Is the differential lock enabled?
+ *
+ * Type: bool
+ */
+#define SCS_TELEMETRY_TRUCK_CHANNEL_differential_lock           "truck.differential_lock"
+
+/**
+ * @brief Is the lift axle control set to lifted state?
+ *
+ * Type: bool
+ */
+#define SCS_TELEMETRY_TRUCK_CHANNEL_lift_axle                   "truck.lift_axle"
+
+/**
+ * @brief Is the lift axle indicator lit?
+ *
+ * Type: bool
+ */
+#define SCS_TELEMETRY_TRUCK_CHANNEL_lift_axle_indicator         "truck.lift_axle.indicator"
+
+/**
+ * @brief Is the trailer lift axle control set to lifted state?
+ *
+ * Type: bool
+ */
+#define SCS_TELEMETRY_TRUCK_CHANNEL_trailer_lift_axle           "truck.trailer.lift_axle"
+
+/**
+ * @brief Is the trailer lift axle indicator lit?
+ *
+ * Type: bool
+ */
+#define SCS_TELEMETRY_TRUCK_CHANNEL_trailer_lift_axle_indicator "truck.trailer.lift_axle.indicator"
+
 // Wear info.
 
 /**
@@ -644,7 +690,7 @@ SCSSDK_HEADER
 #define SCS_TELEMETRY_TRUCK_CHANNEL_wheel_on_ground             "truck.wheel.on_ground"
 
 /**
- * @brief Substance bellow the whell.
+ * @brief Substance below the whell.
  *
  * Index of substance as delivered trough SUBSTANCE config.
  *

@@ -348,7 +348,7 @@ SCSAPI_RESULT scs_telemetry_init(const scs_u32_t version, const scs_telemetry_in
 
 	if (strcmp(version_params->common.game_id, SCS_GAME_ID_EUT2) == 0) {
 
-		// Bellow the minimum version there might be some missing features (only minor change) or
+		// Below the minimum version there might be some missing features (only minor change) or
 		// incompatible values (major change).
 
 		if (version_params->common.game_version < SCS_TELEMETRY_EUT2_GAME_VERSION_1_03) { // Fixed the wheels.count attribute
@@ -370,7 +370,7 @@ SCSAPI_RESULT scs_telemetry_init(const scs_u32_t version, const scs_telemetry_in
 	}
 	else if (strcmp(version_params->common.game_id, SCS_GAME_ID_ATS) == 0) {
 
-		// Bellow the minimum version there might be some missing features (only minor change) or
+		// Below the minimum version there might be some missing features (only minor change) or
 		// incompatible values (major change).
 
 		const scs_u32_t MINIMAL_VERSION = SCS_TELEMETRY_ATS_GAME_VERSION_1_00;
@@ -471,7 +471,7 @@ SCSAPI_VOID scs_telemetry_shutdown(void)
 	game_log = NULL;
 }
 
-// Telemetry api.
+// Cleanup
 
 BOOL APIENTRY DllMain(
 	HMODULE module,
