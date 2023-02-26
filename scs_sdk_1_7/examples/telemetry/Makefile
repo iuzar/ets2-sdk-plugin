@@ -10,16 +10,8 @@ SDK_INCLUDES=\
 	-I../../include/amtrucks/ \
 	-I../../include/eurotrucks2
 
-UNAME:= $(shell uname -s)
-
-ifeq ($(UNAME),Darwin)
-LIB_NAME_OPTION=-install_name
-else
-LIB_NAME_OPTION=-soname
-endif
-
 telemetry.so:  *.cpp $(SDK_HEADERS)
-	gcc -o $@ -fPIC -Wall --shared -Wl,$(LIB_NAME_OPTION),$@ $(SDK_INCLUDES) *.cpp
+	gcc -o $@ -fPIC -Wall --shared -Wl,-soname,$@ $(SDK_INCLUDES) *.cpp
 
 .PHONY: clean
 clean:

@@ -471,7 +471,7 @@ SCSAPI_VOID scs_telemetry_shutdown(void)
 	game_log = NULL;
 }
 
-// Telemetry api.
+// Cleanup
 
 BOOL APIENTRY DllMain(
 	HMODULE module,

@@ -315,7 +315,7 @@ SCSAPI_RESULT scs_telemetry_init(const scs_u32_t version, const scs_telemetry_in
 
 	if (strcmp(version_params->common.game_id, SCS_GAME_ID_EUT2) == 0) {
 
-		// Below the minimum version there might be some missing features (only minor change) or
+		// Bellow the minimum version there might be some missing features (only minor change) or
 		// incompatible values (major change).
 
 		const scs_u32_t MINIMAL_VERSION = SCS_TELEMETRY_EUT2_GAME_VERSION_1_00;
@@ -332,7 +332,7 @@ SCSAPI_RESULT scs_telemetry_init(const scs_u32_t version, const scs_telemetry_in
 	}
 	else if (strcmp(version_params->common.game_id, SCS_GAME_ID_ATS) == 0) {
 
-		// Below the minimum version there might be some missing features (only minor change) or
+		// Bellow the minimum version there might be some missing features (only minor change) or
 		// incompatible values (major change).
 
 		const scs_u32_t MINIMAL_VERSION = SCS_TELEMETRY_ATS_GAME_VERSION_1_00;
